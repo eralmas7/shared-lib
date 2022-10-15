@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>shared-lib</artifactId>
+	<packaging>jar</packaging>
+
+	<name>shared-lib</name>
+	<description>Sharedl ibrary to be used across.</description>
+
+	<parent>
+		<groupId>com.example.spring.cloud</groupId>
+		<artifactId>spring-cloud-parent</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../spring-cloud-parent/pom.xml</relativePath> <!-- lookup parent from repository -->
+	</parent>
+	    
+    <properties>
+		<protobuf.version>3.19.4</protobuf.version>
+        <protobuf-plugin.version>0.6.1</protobuf-plugin.version>
+        <grpc.version>1.45.0</grpc.version>
+        <os-maven-plugin.version>1.4.1.Final</os-maven-plugin.version>
+        <grpc.spring.starter>2.13.1.RELEASE</grpc.spring.starter>
+    </properties>
+    
+    <dependencies>
+  		<dependency>
+		    <groupId>com.google.protobuf</groupId>
+		    <artifactId>protobuf-java</artifactId>
+		    <version>${protobuf.version}</version>
+		</dependency>
+		<dependency>
+            <groupId>net.devh</groupId>
+            <artifactId>grpc-server-spring-boot-starter</artifactId>
+            <version>${grpc.spring.starter}</version>
+        </dependency>
+		<dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-stub</artifactId>
+            <version>${grpc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-protobuf</artifactId>
+            <version>${grpc.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

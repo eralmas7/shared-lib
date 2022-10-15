@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package com.example.common;
+
+option java_multiple_files = true;
+option java_package = "com.example.common";
+option java_outer_classname = "HelloWorldProto";
+
+// The greeting service definition.
+service HelloService {
+    // Sends a greeting
+    rpc SayHello (HelloRequest) returns (HelloReply) {
+    }
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+    string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+    string message = 1;
+}
+
+message Index {
+  string name = 1;
+  string id = 2;
+  string inceptionDate = 3;
+  int64 indexLevel = 4;
+  repeated string constituents = 5;
+}
+
+message TradeInfo {
+  string indexId = 1;
+  string tradeId = 2;
+  string portfolioId = 3;
+  int64 notional = 4;
+  string expiry = 5;
+  string tradeDate = 6;
+  int64 level = 7;
+}
